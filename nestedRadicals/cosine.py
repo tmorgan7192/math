@@ -40,23 +40,26 @@ def main():
         while num >= 2 * denom:
             num -= 2 * denom
 
-    
+    is_repeating = False
+
     if (num,denom) in used and len(used) == len(signs):
         signs.insert(used.index((num, denom)), "rep")
+        is_repeating = True
+
 
     print("cos(" + angle + ") = ", end="")
     for i, sign in enumerate(signs):
         if sign != "rep":
             if i == 0:
                 print(sign + "sqrt(2", end="")
-            elif signs.count("rep") == 0 or i != len(signs) - 1:
+            elif not is_repeating or i != len(signs) - 1:
                 print(" " + sign + " sqrt(2", end ="")
             else:
                 print(" " + sign + " ..." + ")" * (len(signs) - 1) + "/2")
         else:
             print()
             
-    if signs.count("rep") == 0:
+    if not is_repeating:
         print(")" * len(signs) + "/2")
 
 
