@@ -1,0 +1,3 @@
+[submodule "bingo"]
+	path = bingo
+	url = git@github.com:tmorgan7192/bingo.git
