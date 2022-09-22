@@ -4,3 +4,6 @@
 [submodule "Monty-Hall-Simulator"]
 	path = Monty-Hall-Simulator
 	url = git@github.com:tmorgan7192/Monty-Hall-Simulator.git
+[submodule "GameOfLife"]
+	path = GameOfLife
+	url = git@github.com:tmorgan7192/GameOfLife.git
